@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Arseni Bukhval">
+    <title>Pozycjonowanie elementów na stronie</title>
+    <style>
+        body { height: 2000px; font-family: sans-serif; padding: 40px; }
+        .statyczny { position: static; border: 2px solid gray; padding: 10px; }
+        .relatywny { position: relative; top: 20px; left: 40px; background: #ffffcc; padding: 10px; }
+        .kontener { position: relative; width: 300px; height: 150px; border: 3px dashed blue; margin-top: 60px; }
+        .absolutny { position: absolute; bottom: 10px; right: 10px; background: red; color: white; padding: 5px; }
+        .ustalony { position: fixed; top: 0; right: 0; background: black; color: white; padding: 15px; }
+        .warstwy-scroll { 
+            width: 200px; height: 80px; 
+            overflow: auto;
+            border: 2px solid green; margin-top: 30px;
+            position: relative;
+        }
+        .na-gorze { position: sticky; top: 0; z-index: 10; background: lime; }
+    </style>
+</head>
+<body>
+    <div class="ustalony">4. Fixed: Menu zawsze widoczne</div>
+    <h1>Pozycjonowanie</h1>
+    <div class="statyczny">1. Position: Static</div>
+    <div class="relatywny">2. Position: Relative</div>
+    <div class="kontener">
+        Rodzic (Position - relative)
+    <div class="absolutny">3. Position: Absolute</div>
+    </div>
+    <div class="warstwy-scroll">
+        <div class="na-gorze">5. Z-index: 10 (Sticky)</div>
+        6. Overflow: Auto.<br>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+
+</body>
+</html>
